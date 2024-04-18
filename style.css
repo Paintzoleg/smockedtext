@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+
+
+}
+
+
+body {
+    margin: 0;
+    background-color: black;
+    color: #fff;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+    overflow: hidden;
+    /* background-color: black; */
+
+
+}
+
+.text {
+    text-align: center;
+    font-size: 25px;
+    user-select: none;
+    /* color: #fff; */
+}
+
+.text span {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    animation: smoke 2s linear forwards;
+}
+
+
+@keyframes smoke {
+    3% {
+        color: yellow;
+    }
+    5% {
+        color: orangered;
+    }
+    20% {
+        color:rgb(97, 62, 143);
+    }
+    50% {
+        color:rgb(86, 167, 86)
+    }
+    100% {
+        opacity: 0;
+    filter: blur(10px);
+    transform: translateX(300px) translateY(-300px) rotate(720deg) scale(6);
+    }
+}
